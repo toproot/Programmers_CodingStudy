@@ -2,5 +2,7 @@
 # 연속된 수 num개를 더한 값이 total이 될 때, 정수 배열을 오름차순으로 담아 return하도록 solution함수를 완성해보세요.
 
 def solution(num, total):
+    
     answer = []
+    
     return answer
