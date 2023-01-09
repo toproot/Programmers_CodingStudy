@@ -1,4 +1,4 @@
-# Programmers_CodingTest 🔍
+# Programmers_CodingStudy 🔍
 Programmers School Coding Test Practice
 
 ## Lv.0
