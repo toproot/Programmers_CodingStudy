@@ -18,10 +18,11 @@ babbling의 각 문자열에서 "aya", "ye", "woo", "ma"는 각각 최대 한 �
 public class Solution {
 	
 	static String[] canSpeak = new String[] {"aya", "ye", "woo", "ma" };
-	static String[] babbling = new String[]{"aya", "yee", "u", "maa", "wyeoo"};
+	static String[] babbling = new String[]{"aya", "yee", "u", "maa", "wyeoo"}; // 1
+	static String[] babbling2 = new String[] {"ayaye", "uuuma", "ye", "yemawoo", "ayaa"}; //3
 
 	public static void main(String[] args) {
-		System.out.println(solution(babbling));
+		System.out.println(solution(babbling2));
 
 	}
 	
@@ -31,15 +32,22 @@ public class Solution {
         for (String babb : babbling) {
         	String[] str = babb.split("");
         	String strSum = "";
+        	int subAnswer = 0;
         	for (String a : str) {
         		strSum += a;
         		for(String canStr : canSpeak) {
         			if (strSum.equals(canStr)) {
-        				answer ++;
+        				subAnswer ++;
         				strSum = "";
-        				continue;
         			}
         		}
+        	}
+        	if (!strSum.equals("") && subAnswer != 0) {
+        		continue;
+        	} else if (!strSum.equals("") && subAnswer == 0) {
+        		continue;
+        	}else {
+        		answer ++;
         	}
         }
         
